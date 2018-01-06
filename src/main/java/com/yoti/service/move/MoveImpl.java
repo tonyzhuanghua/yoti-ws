@@ -12,19 +12,19 @@ public class MoveImpl implements Move {
         int x = pojo.getHoover().getHooverX();
         int y = pojo.getHoover().getHooverY();
 
-        if (direction.getDirection().equals("E")) {
+        if (direction == Direction.EAST) {
 
             if (x < pojo.getRoom().getRoomX()) x++;
 
-        } else if (direction.getDirection().equals("W")) {
+        } else if (direction == Direction.WEST) {
 
             if (x > 1) x--;
 
-        } else if (direction.getDirection().equals("N")) {
+        } else if (direction == Direction.NORTH) {
 
             if (y < pojo.getRoom().getRoomY()) y++;
 
-        } else if (direction.getDirection().equals("S")) {
+        } else if (direction == Direction.SOUTH) {
 
             if (y > 1) y--;
         }

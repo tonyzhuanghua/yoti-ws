@@ -5,15 +5,6 @@ package com.yoti.service.move;
  */
 public enum Direction {
 
-    EAST("E"), NORTH("N"), SOUTH("S"), WEST("W");
+    EAST, NORTH, SOUTH, WEST;
 
-    private String direction;
-
-    Direction(String direction) {
-        this.direction = direction;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
 }

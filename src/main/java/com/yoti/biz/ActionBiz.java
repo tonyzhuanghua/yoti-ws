@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ActionBiz {
 
-    public ResponsePojo processClean(RequestPojo requestPojo) {
+    public ResponsePojo processClean(RequestPojo requestPojo) throws Exception{
 
         int[] roomSize = requestPojo.getRoomSize();
         int[] coords = requestPojo.getCoords();

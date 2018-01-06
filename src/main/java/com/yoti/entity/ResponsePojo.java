@@ -3,9 +3,7 @@ package com.yoti.entity;
 public class ResponsePojo {
     private int[] coords;
     private int patches;
-
-
-
+    
     public int[] getCoords() {
         return coords;
     }

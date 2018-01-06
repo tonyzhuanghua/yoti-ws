@@ -21,8 +21,10 @@ public class RestService {
     //路径是~/yoti/test
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public ResponsePojo getUserJson(RequestPojo requestPojo) {
+    public ResponsePojo getUserJson(RequestPojo requestPojo) throws Exception {
+        ResponsePojo responsePojo = new ResponsePojo();
 
         return new ActionBiz().processClean(requestPojo);
+
     }
 }
