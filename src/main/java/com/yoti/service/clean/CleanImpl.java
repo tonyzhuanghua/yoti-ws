@@ -1,7 +1,7 @@
 package com.yoti.service.clean;
 
 import com.yoti.entity.Dirt;
-import com.yoti.entity.ResponsePojo;
+import com.yoti.entity.Pojo;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * Created by zhuanghua on 2018/1/5.
  */
 public class CleanImpl implements Clean {
-    public void cleanDirt(ResponsePojo pojo) {
+    public void cleanDirt(Pojo pojo) {
         List<Dirt> dirts = pojo.getDirts();
         final int hooverX = pojo.getHoover().getHooverX();
         final int hooverY = pojo.getHoover().getHooverY();

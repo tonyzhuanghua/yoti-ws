@@ -1,13 +1,13 @@
 package com.yoti.service.move;
 
-import com.yoti.entity.ResponsePojo;
+import com.yoti.entity.Pojo;
 
 
 /**
  * Created by zhuanghua on 2018/1/5.
  */
 public class MoveImpl implements Move {
-    public void moveStep(ResponsePojo pojo, Direction direction) {
+    public void moveStep(Pojo pojo, Direction direction) {
 
         int x = pojo.getHoover().getHooverX();
         int y = pojo.getHoover().getHooverY();

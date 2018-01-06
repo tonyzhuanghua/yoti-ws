@@ -2,7 +2,7 @@ package com.yoti.service;
 
 import com.yoti.entity.Dirt;
 import com.yoti.entity.Hoover;
-import com.yoti.entity.ResponsePojo;
+import com.yoti.entity.Pojo;
 import com.yoti.entity.Room;
 import com.yoti.service.move.Direction;
 import org.junit.Before;
@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestCleanOperation {
 
-    private ResponsePojo pojo = new ResponsePojo();
+    private Pojo pojo = new Pojo();
     private int orgDirtSize;
 
     @Before
