@@ -10,8 +10,9 @@ import java.util.List;
 
 public class ActionBiz {
 
-    public ResponsePojo processClean(RequestPojo requestPojo) throws Exception{
+    public ResponsePojo processClean(RequestPojo requestPojo) throws Exception {
 
+        //parse request and create data transfer object
         int[] roomSize = requestPojo.getRoomSize();
         int[] coords = requestPojo.getCoords();
         List<int[]> patches = requestPojo.getPatches();
@@ -30,10 +31,11 @@ public class ActionBiz {
         pojo.setHoover(hoover);
         pojo.setDirts(dirts);
 
-
+        // call CLeanOperation service
+        // init the operation
         CleanOperation cleanOperation = CleanOperation.init(pojo);
 
-
+        // start operations
         for (char c : instructions.toCharArray()) {
             String direction = String.valueOf(c);
             if (direction.equals("E")) {
@@ -48,7 +50,7 @@ public class ActionBiz {
 
         }
 
-
+        // compose response
         Hoover finalPosition = pojo.getHoover();
         List<Dirt> finalDirts = pojo.getDirts();
 

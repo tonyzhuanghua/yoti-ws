@@ -19,20 +19,22 @@ public class CleanOperation {
         return new CleanOperation(pojo);
     }
 
+
+    // move action
     public CleanOperation move(Direction direction) {
         new MoveImpl().moveStep(status, direction);
         return this;
     }
 
+    // clean action
     public CleanOperation clean() {
         new CleanImpl().cleanDirt(status);
         return this;
     }
 
+    // move and clean combined
     public CleanOperation moveAndClean(Direction direction) {
-        new MoveImpl().moveStep(status, direction);
-        new CleanImpl().cleanDirt(status);
-        return this;
+        return move(direction).clean();
     }
 
     public Pojo getPojo() {
