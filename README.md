@@ -1,8 +1,22 @@
 # yoti-ws
 
-invoke sequence:
-### VC layer
-request <---> com.yoti.rest.RestApplication(configed in /web/WEB-INF/web.xml) <---> com.yoti.rest.resource.RestService
+Restful resource  defined in web.xml pointing to RestApplication.java.  
 
-### M layer
-<---> com.yoti.biz.ActionBiz <---> com.yoti.service.CleanOperation (facade) ---> com.yoti.service.move.Move & com.yoti.service.clean.Clean
+### Dependencies
+
+- GlassFish 4.1.2
+- JDK 1.8
+- Jersey 2
+- More please check pom.xml
+
+### Main Logic
+Please check comments in CleanOperation.java and ActionBiz.java
+
+- ActionBiz.java: fulfills web service request/response logic
+- CleanOperation.java: fulfills the operation logic
+
+### Test
+
+- Please deploy with GlassFish before test
+
+- There is also a junit test class, please run "mvn clean test"
