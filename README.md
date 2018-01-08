@@ -17,6 +17,8 @@ Please check comments in CleanOperation.java and ActionBiz.java
 
 ### Test
 
+Use Postman for the web service test
+
 - Please deploy with GlassFish before test
 
 - There is also a junit test class, please run "mvn clean test"
