@@ -1,11 +1,11 @@
 package com.yoti.service.move;
 
-import com.yoti.entity.Pojo;
+import com.yoti.entity.DtoPojo;
 
 /**
  * Created by zhuanghua on 2018/1/5.
  */
 public interface Move {
 
-    void moveStep(Pojo pojo, Direction direction);
+    void moveStep(DtoPojo dtoPojo, Direction direction);
 }

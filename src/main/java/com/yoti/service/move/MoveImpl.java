@@ -1,20 +1,20 @@
 package com.yoti.service.move;
 
-import com.yoti.entity.Pojo;
+import com.yoti.entity.DtoPojo;
 
 
 /**
  * Created by zhuanghua on 2018/1/5.
  */
 public class MoveImpl implements Move {
-    public void moveStep(Pojo pojo, Direction direction) {
+    public void moveStep(DtoPojo dtoPojo, Direction direction) {
 
-        int x = pojo.getHoover().getHooverX();
-        int y = pojo.getHoover().getHooverY();
+        int x = dtoPojo.getHoover().getHooverX();
+        int y = dtoPojo.getHoover().getHooverY();
 
         if (direction == Direction.EAST) {
 
-            if (x < pojo.getRoom().getRoomX()) x++;
+            if (x < dtoPojo.getRoom().getRoomX()) x++;
 
         } else if (direction == Direction.WEST) {
 
@@ -22,14 +22,14 @@ public class MoveImpl implements Move {
 
         } else if (direction == Direction.NORTH) {
 
-            if (y < pojo.getRoom().getRoomY()) y++;
+            if (y < dtoPojo.getRoom().getRoomY()) y++;
 
         } else if (direction == Direction.SOUTH) {
 
             if (y > 1) y--;
         }
 
-        pojo.getHoover().setHooverX(x);
-        pojo.getHoover().setHooverY(y);
+        dtoPojo.getHoover().setHooverX(x);
+        dtoPojo.getHoover().setHooverY(y);
     }
 }

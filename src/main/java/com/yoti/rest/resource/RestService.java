@@ -2,7 +2,6 @@ package com.yoti.rest.resource;
 
 import com.yoti.biz.ActionBiz;
 import com.yoti.entity.RequestPojo;
-import com.yoti.entity.Pojo;
 import com.yoti.entity.ResponsePojo;
 
 import javax.ws.rs.*;
@@ -21,7 +20,7 @@ public class RestService {
     //路径是~/yoti/test
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public ResponsePojo getUserJson(RequestPojo requestPojo) throws Exception {
+    public ResponsePojo getResponseJson(RequestPojo requestPojo) throws Exception {
         ResponsePojo responsePojo = new ResponsePojo();
 
         return new ActionBiz().processClean(requestPojo);

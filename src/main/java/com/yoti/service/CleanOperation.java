@@ -1,6 +1,6 @@
 package com.yoti.service;
 
-import com.yoti.entity.Pojo;
+import com.yoti.entity.DtoPojo;
 import com.yoti.service.clean.CleanImpl;
 import com.yoti.service.move.Direction;
 import com.yoti.service.move.MoveImpl;
@@ -9,14 +9,14 @@ import com.yoti.service.move.MoveImpl;
  * Created by zhuanghua on 2018/1/5.
  */
 public class CleanOperation {
-    private Pojo status;
+    private DtoPojo status;
 
-    private CleanOperation(Pojo pojo) {
-        status = pojo;
+    private CleanOperation(DtoPojo dtoPojo) {
+        status = dtoPojo;
     }
 
-    public static CleanOperation init(Pojo pojo) {
-        return new CleanOperation(pojo);
+    public static CleanOperation init(DtoPojo dtoPojo) {
+        return new CleanOperation(dtoPojo);
     }
 
 
@@ -37,7 +37,7 @@ public class CleanOperation {
         return move(direction).clean();
     }
 
-    public Pojo getPojo() {
+    public DtoPojo getPojo() {
         return status;
     }
 }

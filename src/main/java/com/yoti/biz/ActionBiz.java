@@ -5,7 +5,6 @@ import com.yoti.service.CleanOperation;
 import com.yoti.service.move.Direction;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ActionBiz {
@@ -26,14 +25,14 @@ public class ActionBiz {
             dirts.add(dirt);
         });
 
-        Pojo pojo = new Pojo();
-        pojo.setRoom(room);
-        pojo.setHoover(hoover);
-        pojo.setDirts(dirts);
+        DtoPojo dtoPojo = new DtoPojo();
+        dtoPojo.setRoom(room);
+        dtoPojo.setHoover(hoover);
+        dtoPojo.setDirts(dirts);
 
         // call CLeanOperation service
         // init the operation
-        CleanOperation cleanOperation = CleanOperation.init(pojo);
+        CleanOperation cleanOperation = CleanOperation.init(dtoPojo);
 
         // start operations
         for (char c : instructions.toCharArray()) {
@@ -51,8 +50,8 @@ public class ActionBiz {
         }
 
         // compose response
-        Hoover finalPosition = pojo.getHoover();
-        List<Dirt> finalDirts = pojo.getDirts();
+        Hoover finalPosition = dtoPojo.getHoover();
+        List<Dirt> finalDirts = dtoPojo.getDirts();
 
         int[] finalCoords = {finalPosition.getHooverX(), finalPosition.getHooverY()};
         int cleanPatches = patches.size() - finalDirts.size();
