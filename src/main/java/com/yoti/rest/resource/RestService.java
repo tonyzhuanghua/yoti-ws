@@ -4,9 +4,11 @@ import com.yoti.biz.ActionBiz;
 import com.yoti.entity.RequestPojo;
 import com.yoti.entity.ResponsePojo;
 
+import javax.inject.Singleton;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
+@Singleton
 @Path("/yoti")
 public class RestService {
     @GET

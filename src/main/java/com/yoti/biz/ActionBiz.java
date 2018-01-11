@@ -4,9 +4,11 @@ import com.yoti.entity.*;
 import com.yoti.service.CleanOperation;
 import com.yoti.service.move.Direction;
 
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
 
+@Singleton
 public class ActionBiz {
 
     public ResponsePojo processClean(RequestPojo requestPojo) throws Exception {
