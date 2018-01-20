@@ -14,6 +14,7 @@ Please check comments in CleanOperation.java and ActionBiz.java
 
 - ActionBiz.java: fulfills web service request/response logic
 - CleanOperation.java: fulfills the operation logic
+- Singleton for resource and ActionBiz
 
 ### Test
 
