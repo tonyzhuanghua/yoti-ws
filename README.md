@@ -1,6 +1,6 @@
 # yoti-ws
 
-Restful resource  defined in web.xml pointing to RestApplication.java.  
+Restful resource  defined in web.xml pointing to RestApplication.java.  This is a facade pattern.
 
 ### Dependencies
 
